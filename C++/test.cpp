@@ -1,10 +1,20 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-  int x;
-  cout << "Type a number: "; // Type a number and press enter
-  cin >> x; // Get user input from the keyboard
-  cout << "Your number is: " << x;
-  return 0;
+int main()
+{
+    // giving system command and storing return value
+    int returnCode = system("echo Hello, World!");
+
+    // checking if the command was executed successfully
+    if (returnCode == 0) {
+        cout << "Command executed successfully." << endl;
+    }
+    else {
+        cout << "Command execution failed or returned "
+                "non-zero: "
+             << returnCode << endl;
+    }
+
+    return 0;
 }
