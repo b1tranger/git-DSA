@@ -17,25 +17,27 @@ int main()
     {
         cout << a[i]<< " ";
     }
-    for(int i = 0; i < n; i++)
-    {
-        int key = a[i];
-        int j = i-1;
-
-        while(j>=0 && a[j]>key)
-        {
-            a[j+1]=a[j];
-            j--;
-        }
-        a[j+1]=key;
-
-    }
-    cout << "Sorted Array:\n\n";
-    for(int i = 0; i < n; i++)
-    {
-        cout << a[i] << " ";
-    }
     cout << "\n\n";
+    for(int i = 0; i < n-1 ; i++)
+    {
+        int minIdx = i;
+        for(int j=i+1; j<n; j++)
+        {
+            if(a[j]<a[minIdx])
+            {
+                minIdx = j;
+            }
+
+        }swap(a[i],a[minIdx]);
+
+    }
+    cout << "\n\nSorted Array:\n\n";
+    for(int i = 0; i < n; i++)
+    {
+        cout << a[i]<< " ";
+    }
+
+
 
     return 0;
 }

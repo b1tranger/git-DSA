@@ -27,13 +27,13 @@ int main()
     cout << "\n";
 
 
-    for(int i = L; i<=R; i++)
+    for(int i = L; i<=R-1; i++)
     {
         mid=L+(R-L)/2;
         if(mid==n)
         {
             found = 1;
-            p = i;
+            p = i+1;
         }
         else if(n>mid)
         {

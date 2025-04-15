@@ -41,7 +41,7 @@ int main()
     cin >> q;
     while(q--)
     {
-        int l,r;
+        int l,r,sum=0;
         cin >> l >> r;
         if(l==0)
         {
@@ -49,9 +49,10 @@ int main()
         }
         else
         {
-            int sum = pre[r]-pre[l-1];
+            sum = pre[r]-pre[l-1];
             cout<<sum<<endl;
         }
+
     }
 
     return 0;
